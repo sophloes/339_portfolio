@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sophie Loesberg Photography</title>
+    <link rel="icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="images/logo.png"/>
+    <style>
+		#myBtn {
+		  display: none;
+		  position: fixed;
+		  bottom: 20px;
+		  right: 30px;
+		  z-index: 99;
+		  font-size: 18px;
+		  border: none;
+		  outline: none;
+		  background-color:#000000;
+		  color: white;
+		  cursor: pointer;
+		  padding: 15px;
+		  border-radius: 4px;
+		}
+		#myBtn:hover {
+		  background-color: #555;
+		}
+	</style>
+</head>
+<body>
+<header id="home-header">
+    <a href="index.html"><img src="images/logo2.png" alt="logo" id = "logo"></a>
+	<nav>
+		<ul>
+			<li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="nature.html">Nature</a></li>
+            <li><a href="adventure.html">Adventure</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main>
+    <div class="parallax" style="overflow-y: auto" tabindex="0">
+        <section class="home-img" style="background-image: url(images/mood_board.png)"></section>
+        <section class="home-text" style="--bg: #000000">
+            <h1>
+                Sophie Loesberg Photography
+            </h1>
+        </section>
+        <section class="home-img" style="background-image: url(images/santabarbara.jpg)"></section>
+        <section class="home-text" style="--bg: #000000">
+            <h2>
+                Aspiring Experience Designer & Strategist.
+            </h2>
+        </section>
+        <section class="home-img" style="background-image: url(images/soccer.jpg)"></section>
+        <section class="home-text">
+            <h2>
+                Part-Time Photographer & Adventurer.
+            </h2>
+        </section>
+        <section class="home-img" style="background-image: url(images/malibu.jpg)"></section>
+        <section class="home-text" style="--bg: #000000">
+            <h2>
+                You can find me sipping Chai Tea Lattes at a coffee shop. . .
+            </h2>
+        </section>
+        <section class="home-img" style="background-image: url(images/normandy2.jpg)"></section>
+        <section class="home-text">
+            <h2>
+                In the dance studio choreographing. . .
+            </h2>
+        </section>
+        <section class="home-img" style="background-image: url(images/iceland5.jpg)"></section>
+        <section class="home-text" style="--bg: #000000">
+            <h2>
+                Or planning my next travel adventure.
+            </h2>
+        </section>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+	
+	<script>
+	//Get the button
+	var mybutton = document.getElementById("myBtn");
+	
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+	
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+	
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+	</script>
+</main>
+
+<footer>
+    <p>University of Michigan School of Information <br/>
+      &copy; Sophie Loesberg - Web Design Fall 2020 <br/>
+      <a id="mail" href="mailto: sophloes@umich.edu">sophloes@umich.edu</a> | (908) 447 - 7677 | <a id="website" href="http://sophieloesberg.com">sophieloesberg.com</a> </p>
+</footer>
+</body>
+</html>

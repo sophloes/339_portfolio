@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Adventure</title>
+	<link rel="icon" href="imgs/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="shortcut icon" type="image/png" href="images/logo.png"/>
+	
+	<style>
+		#myBtn {
+		  display: none;
+		  position: fixed;
+		  bottom: 20px;
+		  right: 30px;
+		  z-index: 99;
+		  font-size: 18px;
+		  border: none;
+		  outline: none;
+		  background-color:#000000;
+		  color: white;
+		  cursor: pointer;
+		  padding: 15px;
+		  border-radius: 4px;
+		}
+		#myBtn:hover {
+		  background-color: #555;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<a href="index.html"><img src="images/logo2.png" alt="logo" id = "logo"></a>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="nature.html">Nature</a></li>
+            <li class="current"><a href="adventure.html">Adventure</a></li>
+		</ul>
+	</nav>
+</header>
+
+
+<main>
+	<h1>Adventure</h1>
+	<div class="container">
+		
+	<div class="img-one"><img src="images/hollywood.jpg" alt="Hollywood Sign, Los Angeles" class="gallery"/></div>
+	
+	<div class="img-two"><img src="images/malibu.jpg" alt="Malibu, California" class="gallery"/></div>
+
+	<div class="img-fifteen"><img src="images/rennes1.jpg" alt="Rennes, France" class="gallery"/></div>
+						
+	<div class="img-sixteen"><img src="images/soccer.jpg" alt="Rennes, France" class="gallery"/></div>
+
+	<div class="img-nine"><img src="images/nyc.jpg" alt="Museum of Arts and Design, New York, New York" class="gallery"/></div>
+	
+	<div class="img-ten"><img src="images/paris.jpg" alt="Musée d'Orsay, Paris, France" class="gallery"/></div>
+	
+	<div class="img-eleven"><img src="images/rennes2.jpg" alt="Place de la Mairie, Rennes, France" class="gallery"/></div>
+	
+	<div class="img-twelve"><img src="images/mexico2.jpg" alt="Cancún, Mexico" class="gallery"/></div>
+	
+	<div class="img-fifteen"><img src="images/iceland6.jpg" alt="Iceland" class="gallery"/></div>
+
+	<div class="img-sixteen"><img src="images/mexico4.jpg" alt="Cancún, Mexico" class="gallery"/></div>
+
+	
+	</div>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+	
+	<script>
+	//Get the button
+	var mybutton = document.getElementById("myBtn");
+	
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+	
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+	
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+	</script>
+	
+</main>
+
+
+<footer>
+    <p>University of Michigan School of Information <br/>
+      &copy; Sophie Loesberg - Web Design Fall 2020 <br/>
+      <a href="mailto: sophloes@umich.edu">sophloes@umich.edu</a> | (908) 447 - 7677 | <a href="http://sophieloesberg.com">sophieloesberg.com</a> </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,667 @@
+
+
+
+/*general settings*/
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #222629;
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.2;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    /*width: inherit;*/
+    /*padding: 25px;*/
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  margin: auto;
+  width: 95vw;
+  padding-bottom: 30px;
+}
+
+a{
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*headings settings*/
+h1{
+  font-size: 60px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 40px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+h3{
+  font-size: 18px;
+  text-align: left;
+  line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar */
+header{
+  display: flex;
+  /*flex-direction: column;*/
+  align-items: center;
+}
+
+nav{
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: baseline;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+nav li{
+  display:inline;
+  padding-right:20px;
+}
+
+nav a{
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none; 
+}
+
+header img{
+  width: 35px;
+  height: auto;
+}
+
+/*Write selector/rule property to add an underline when
+links in the navigation are in the hover or focus state.*/
+nav a:hover, nav a:focus{
+  text-decoration:underline;
+}
+
+nav ul li{
+	background-color: #474B4F;
+	padding:10px;
+	width:25%;
+  border:1px solid;
+  color: #ffffff
+}
+.current{
+  text-decoration: underline;
+  background-color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+#mail, #website{
+  color: #ffffff;
+}
+
+a:active {
+  color: #ffffff;
+}
+
+footer{
+  background-color: #474B4F;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  grid-column: 1 / -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*about page*/
+div.about-image{
+  height: 100%;
+  padding-top: 10px;
+}
+.flip-card {
+  background-color: transparent;
+  /*border: 1px solid #f1f1f1;*/
+  perspective: 1000px; /*Remove this if you don't want the 3D effect*/
+  width: 300px;
+  height: 300px;
+}
+.flip-card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  color: black;
+}
+.flip-card-back {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #474B4F;
+  color: white;
+  transform: rotateY(180deg);
+  width: 300px;
+  height: 300px;
+}
+div.about-heading{
+  text-align: left;
+}
+.about-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  margin: auto;
+  width: 98vw;
+}
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
+/*css generated animation*/
+div.slide-left {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-left h2 {
+  animation: slide-left 2s;
+}
+div.slide-left h3 {
+  animation: slide-left 5s;
+}
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+/*FIX THE MDEIA QUERY*/
+@media screen and (prefers-reduced-motion){
+  div.slide-left h2{
+    animation: none;
+   }
+  div.slide-left h3{
+    animation: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*home page*/
+/* parallax home page styling */
+.parallax {
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  overflow-y: auto;
+  perspective: 3px;
+}
+section {
+  background-size: cover;
+  color: white;
+  background-color: #000000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+section.home-img {
+  background-position: center center;
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: cover;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+  height: 100vh;
+  width: auto;
+}
+section.home-text {
+  text-align: center;
+  height: 50vh;
+  }
+section.home-heading {
+  text-align: center;
+  z-index: -1;
+  transform: translateY(-30vh) translateZ(1px) scale(1.5);
+}
+h2.home{
+  text-align: center;
+}
+
+h3.home{
+  text-align: center;
+  color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact form */
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #474B4F;
+  color: #ffffff;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+}
+input[type=submit]:hover {
+  background-color: #000000;
+}
+div.contactform {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 5px;
+  padding: 20px;
+}
+div.form-text{
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*nature page & adventure page*/
+img.gallery {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+
+img.gallery:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*tablet layout*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    margin: auto;
+    width: 95vw;
+    padding-bottom: 30px;
+  }
+  #logo{
+    height: 50px;
+    width: auto;
+  }
+  div.about-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: start;
+    align-items: center;
+    margin: auto;
+    width: 98vw;
+    padding-bottom: 100px;
+  }
+  div.slide-left{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  div.about-image{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  div.about-text-block{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: block;
+    margin-block-start: 2em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.2;
+  }
+  img.profile-picture{
+    height: 300px;
+    width: auto;
+  }
+  div.form-text{
+    display: grid;
+    justify-items: center;
+    margin: auto;
+    width: 98vw;
+  }
+  div.contactform{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 5px;
+    padding: 20px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop layout */
+@media screen and (min-width: 1024px){
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    margin: auto;
+    width: 95vw;
+    padding-bottom: 30px;
+  }
+  #logo{
+    height: 100px;
+    width: auto;
+  }
+  div.about-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: start;
+    align-items: center;
+    margin: auto;
+    width: 98vw;
+    padding-bottom: 100px;
+  }
+  div.slide-left{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  div.about-image{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  div.about-text-block{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: block;
+    margin-block-start: 2em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.2;
+  }
+  img.profile-picture{
+    height: 450px;
+    width: auto;
+  }
+  .flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    width: 450px;
+    height: 450px;
+  }
+  .flip-card-back {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #474B4F;
+    color: white;
+    transform: rotateY(180deg);
+    width: 450px;
+    height: 450px;
+  }
+  div.form-text{
+    display: grid;
+    justify-items: center;
+    margin: auto;
+    width: 98vw;
+  }
+  div.contactform{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 5px;
+    padding: 20px;
+  }
+}
+
